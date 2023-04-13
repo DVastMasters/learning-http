@@ -1,3 +1,5 @@
+const {crawlPage} = require("./crawl") 
+
 const main = (args) => {
     if (args.length != 3) {
         console.log('Please, input only one argumment.');
@@ -7,6 +9,8 @@ const main = (args) => {
     const baseURL = args[2];
     
     console.log('We be going to start crawling at ' + baseURL);
+
+    crawlPage(baseURL);
 }
 
 main(process.argv);
